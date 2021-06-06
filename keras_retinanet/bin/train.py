@@ -16,22 +16,22 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-from ..utils.transform import random_transform_generator
-from ..utils.tf_version import check_tf_version
-from ..utils.model import freeze as freeze_model
-from ..utils.image import random_visual_effect_generator
-from ..utils.gpu import setup_gpu
-from ..utils.config import read_config_file, parse_anchor_parameters, parse_pyramid_levels
-from ..utils.anchors import make_shapes_callback
-from ..preprocessing.pascal_voc import PascalVocGenerator
-from ..preprocessing.open_images import OpenImagesGenerator
-from ..preprocessing.kitti import KittiGenerator
-from ..preprocessing.csv_generator import CSVGenerator
-from ..models.retinanet import retinanet_bbox
-from ..callbacks.eval import Evaluate
-from ..callbacks import RedirectModel
-from .. import models
-from .. import losses
+from keras_retinanet.utils.transform import random_transform_generator
+from keras_retinanet.utils.tf_version import check_tf_version
+from keras_retinanet.utils.model import freeze as freeze_model
+from keras_retinanet.utils.image import random_visual_effect_generator
+from keras_retinanet.utils.gpu import setup_gpu
+from keras_retinanet.utils.config import read_config_file, parse_anchor_parameters, parse_pyramid_levels
+from keras_retinanet.utils.anchors import make_shapes_callback
+from keras_retinanet.preprocessing.pascal_voc import PascalVocGenerator
+from keras_retinanet.preprocessing.open_images import OpenImagesGenerator
+from keras_retinanet.preprocessing.kitti import KittiGenerator
+from keras_retinanet.preprocessing.csv_generator import CSVGenerator
+from keras_retinanet.models.retinanet import retinanet_bbox
+from keras_retinanet.callbacks.eval import Evaluate
+from keras_retinanet.callbacks import RedirectModel
+from keras_retinanet import models
+from keras_retinanet import losses
 import argparse
 import os
 import sys
