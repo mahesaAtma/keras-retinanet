@@ -214,7 +214,7 @@ def create_callbacks(model, training_model, prediction_model, validation_generat
     if args.evaluation and validation_generator:
         callbacks.append(keras.callbacks.EarlyStopping(
             monitor='mAP',
-            patience=5,
+            patience=50,
             mode='max',
             min_delta=0.01
         ))
