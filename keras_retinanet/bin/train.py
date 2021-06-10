@@ -128,7 +128,7 @@ def create_models(backbone_retinanet, num_classes, weights, multi_gpu=0,
             'classification': losses.focal()
         },
         optimizer=keras.optimizers.Adadelta(
-            learning_rate=0.001, rho=0.95, epsilon=1e-07, name="Adadelta"
+            learning_rate=lr, rho=0.95, epsilon=1e-07, name="Adadelta"
         )
     )
     return model, training_model, prediction_model
