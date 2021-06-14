@@ -128,7 +128,7 @@ def create_models(backbone_retinanet, num_classes, weights, multi_gpu=0,
             'classification': losses.focal()
         },
         optimizer=keras.optimizers.Adagrad(
-            learning_rate=LR,
+            learning_rate=lr,
             initial_accumulator_value=0.1,
             epsilon=1e-07,
             name="Adagrad"
