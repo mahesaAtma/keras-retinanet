@@ -127,7 +127,14 @@ def create_models(backbone_retinanet, num_classes, weights, multi_gpu=0,
             'regression': losses.smooth_l1(),
             'classification': losses.focal()
         },
-        optimizer=keras.optimizers.Adam(lr=lr, clipnorm=optimizer_clipnorm)
+        optimizer=keras.optimizers.RMSprop(
+            learning_rate=lr,
+            rho=0.9,
+            momentum=0.0,
+            epsilon=1e-07,
+            centered=False,
+            name="RMSprop"
+        )
     )
     return model, training_model, prediction_model
 
